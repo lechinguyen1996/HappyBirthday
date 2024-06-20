@@ -149,37 +149,24 @@
     </script>
 </html>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhạc HTML</title>
 </head>
 <body>
-  <audio id="background-music" loop>
-    <source src="https://raw.githubusercontent.com/lechinguyen1995/HappyBirthday/main/ChucMungSinhNhat.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-
-  <script>
-    // Tạo sự kiện người dùng để phát nhạc khi người dùng tương tác
-    document.addEventListener('DOMContentLoaded', function() {
-      var audio = document.getElementById('background-music');
-
-      // Kiểm tra xem có sự kiện người dùng (như touchstart) để phát âm thanh
-      var playPromise = audio.play();
-      if (playPromise !== undefined) {
-        playPromise.then(_ => {
-          // Âm thanh đã bắt đầu phát
-        }).catch(error => {
-          // Không thể phát âm thanh tự động - yêu cầu sự tương tác từ người dùng
-          document.addEventListener('touchstart', function() {
-            audio.play();
-          });
-        });
-      }
-    });
-  </script>
+    <h1>Nghe nhạc</h1>
+    <audio controls>
+        <source src="https://raw.githubusercontent.com/lechinguyen1995/HappyBirthday/main/ChucMungSinhNhat.mp3" type="audio/mpeg">
+        Trình duyệt của bạn không hỗ trợ thẻ audio.
+    </audio>
 </body>
 </html>
+
+    
+   
+  
+
+
